@@ -60,28 +60,61 @@ p {
   text-align: justify;
 }
 
-  column-rule: var(--rule-width) solid var(--border-ink);
+/* Ink bleed hover effect for links and headings */
+a, h2, h3 {
+  transition: text-shadow 0.2s ease;
+}
+
+a:hover, h2:hover, h3:hover {
+  text-shadow: 0 0 1px var(--text-ink), 0 0 3px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.drop-cap {
+  float: left;
+  font-size: 5rem;
+  line-height: 0.8;
+  padding-top: 0.2rem;
+  padding-right: 0.5rem;
+  font-family: var(--font-title);
+  color: var(--text-ink);
 }
 
 .multi-column-2 {
   column-count: 2;
   column-gap: var(--col-gap);
   column-rule: var(--rule-width) solid var(--border-ink);
+  text-align: justify;
 }
 
-@media (max-width: 900px) {
-  .multi-column-3, .multi-column-2 {
+@media (max-width: 768px) {
+  .multi-column-2 {
     column-count: 1;
     column-rule: none;
   }
 }
 
-.drop-cap::first-letter {
-  font-family: var(--font-title);
-  font-size: 4.5rem;
-  line-height: 0.8;
-  float: left;
-  margin-right: 0.5rem;
-  margin-top: 0.2rem;
-  text-transform: uppercase;
+.newspaper-divider {
+  width: 100%;
+  border-top: var(--rule-thick) solid var(--border-ink);
+  border-bottom: var(--rule-width) solid var(--border-ink);
+  height: 2px;
+  margin: 1.5rem 0;
+}
+
+/* Halftone Image Filter */
+.halftone-img {
+  filter: grayscale(100%) contrast(150%) sepia(20%);
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+  transition: filter 0.3s ease;
+}
+
+.microfilm-mode .halftone-img {
+  filter: grayscale(100%) invert(100%) contrast(120%);
+  mix-blend-mode: screen;
+}
+
+.halftone-img:hover {
+  filter: grayscale(0%) contrast(100%) sepia(0%);
 }
