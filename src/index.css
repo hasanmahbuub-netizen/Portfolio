@@ -92,6 +92,14 @@ a:hover, h2:hover, h3:hover {
     column-count: 1;
     column-rule: none;
   }
+  #root {
+    padding: 1rem;
+  }
+  .drop-cap {
+    font-size: 4rem;
+    padding-top: 0.1rem;
+    margin-bottom: -0.5rem;
+  }
 }
 
 .newspaper-divider {

@@ -276,3 +276,51 @@
   margin-bottom: 0.5rem;
 }
 
+/* --- Mobile Optimization --- */
+@media (max-width: 768px) {
+  .masthead-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .masthead-title {
+    font-size: 3.5rem; /* Drastically scale down the huge Chomsky font */
+    line-height: 1;
+    margin-top: 0.5rem;
+  }
+
+  .masthead-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .lead-headline {
+    font-size: 2.5rem; /* Scale down main article title */
+  }
+
+  .secondary-headline {
+    font-size: 1.8rem;
+  }
+
+  .pull-quote {
+    font-size: 1.3rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .classifieds-grid {
+    grid-template-columns: 1fr; /* Single column classifieds on phone */
+  }
+
+  .ticker__item {
+    padding: 0 1rem;
+    font-size: 0.75rem;
+  }
+
+  .ad-title {
+    font-size: 2rem;
+  }
+}
+
