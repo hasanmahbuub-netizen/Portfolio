@@ -66,40 +66,96 @@ function App() {
           <div className="newspaper-divider"></div>
         </header>
 
-        <main className="front-page">
-          <article className="lead-story">
-            <h2 className="lead-headline">FROM CLASSROOM TO BOARDROOM: A NEW ERA OF COMMERCE</h2>
-            <div className="author-byline">Mirpur, Dhaka • Special Report</div>
-            
-            <div className="multi-column-2">
-              <p className="drop-cap">
-                B
-              </p>
-              <p style={{marginTop: '-0.2rem'}}>
-                uilt and ran businesses before graduating. That is the opening statement of a career that refuses to wait for permission. Mahbub Hasan Anik is not just a student of marketing at North South University; he is a practitioner who has already altered the landscape of B2B retail in Bangladesh.
-              </p>
-              <p>
-                As the sole distributor for two international brands, Emily Pets & Diyouke, Anik orchestrated the growth of a distribution network from ground zero to over 300 retail stores nationwide. This relentless expansion resulted in generating over 1 crore BDT in cumulative sales. Through targeted positioning and aggressive account growth, he transformed Diyouke into one of the nation's fastest-growing pet-food brands.
-              </p>
-
-              <div className="pull-quote">
-                "Delivered 3.1× ROAS on Meta Ads, proving that data-driven marketing is the lifeblood of modern retail."
+        <main className="editorial-flow">
+          {/* SECTION 1: The Lead Story & Profile */}
+          <section className="editorial-section lead-story-section">
+            <div className="lead-story-content">
+              <h2 className="lead-headline">FROM CLASSROOM TO BOARDROOM: A NEW ERA OF COMMERCE</h2>
+              <div className="author-byline">Mirpur, Dhaka • Special Report</div>
+              
+              <div className="multi-column-2">
+                <p className="drop-cap">B</p>
+                <p style={{marginTop: '-0.2rem'}}>
+                  uilt and ran businesses before graduating. That is the opening statement of a career that refuses to wait for permission. Mahbub Hasan Anik is not just a student of marketing at North South University; he is a practitioner who has already altered the landscape of B2B retail in Bangladesh.
+                </p>
+                <p>
+                  As the sole distributor for two international brands, Emily Pets & Diyouke, Anik orchestrated the growth of a distribution network from ground zero to over 300 retail stores nationwide. This relentless expansion resulted in generating over 1 crore BDT in cumulative sales. Through targeted positioning and aggressive account growth, he transformed Diyouke into one of the nation's fastest-growing pet-food brands.
+                </p>
+                <div className="pull-quote">
+                  "Delivered 3.1× ROAS on Meta Ads, proving that data-driven marketing is the lifeblood of modern retail."
+                </div>
+                <h3 className="tertiary-headline">A TRACK RECORD OF GROWTH</h3>
+                <p>
+                  At <strong>Kitty Imports</strong> (Nov 2023 – Jan 2026), his strategic management of Meta ad campaigns—with spends exceeding 200,000 BDT—drove unprecedented brand awareness and lead generation. Concurrently, at <strong>Kutush Pet Shop</strong>, his efforts as Business Development Executive spurred a 225% year-over-year revenue growth by optimizing stock allocation and expanding distributor partnerships.
+                </p>
+                <p>
+                  His operational acumen was further honed at <strong>IIANA International</strong>, evaluating government tenders and coordinating multi-site logistics to achieve 100% on-time delivery. At <strong>Qualifie</strong>, Anik built a B2B partnership network from scratch, onboarding 33 organizations and driving 350+ applications via a content strategy that vastly outperformed sector averages.
+                </p>
               </div>
+            </div>
+            
+            <aside className="lead-story-sidebar">
+              <div className="profile-section">
+                <img src="/author_portrait.jpeg" alt="Portrait of Mahbub Hasan Anik" className="profile-img" />
+                <div className="profile-name">Mahbub Hasan Anik</div>
+                <div className="profile-title">Editor-in-Chief & Lead Engineer</div>
+              </div>
+              <div className="ad-box">
+                <div className="ad-title" style={{fontSize: '1.8rem'}}>CONTACT</div>
+                <p style={{fontSize: '0.9rem', marginBottom: '0.2rem'}}><strong>Phone:</strong> +8801846799863</p>
+                <p style={{fontSize: '0.9rem'}}><strong>Email:</strong> mahbub.anik02@gmail.com</p>
+              </div>
+            </aside>
+          </section>
 
-              <h3 className="tertiary-headline">A TRACK RECORD OF GROWTH</h3>
-              <p>
-                At <strong>Kitty Imports</strong> (Nov 2023 – Jan 2026), his strategic management of Meta ad campaigns—with spends exceeding 200,000 BDT—drove unprecedented brand awareness and lead generation. Concurrently, at <strong>Kutush Pet Shop</strong>, his efforts as Business Development Executive spurred a 225% year-over-year revenue growth by optimizing stock allocation and expanding distributor partnerships.
+          {/* SECTION 2: Centerfold Feature (MEEK) */}
+          <section className="editorial-section centerfold-banner">
+            <div className="centerfold-content">
+              <h2 className="centerfold-headline">MEEK: THE INTERACTIVE SPIRITUAL CHALLENGE</h2>
+              <p className="centerfold-subhead">"Can you say it perfectly?"</p>
+              <div className="centerfold-image-container">
+                <a href="https://joinmeek.vercel.app" target="_blank" rel="noopener noreferrer">
+                  <img src="/meek.png" alt="Meek App" className="centerfold-img" />
+                </a>
+              </div>
+              <p className="centerfold-text">
+                Standing out as his premier digital venture, MEEK is an interactive spiritual application that bridges technology with mindfulness. It challenges users to perfect their pronunciation and engagement. Beautifully engineered, deployed on Vercel, and built to engage. <a href="https://joinmeek.vercel.app" target="_blank" rel="noopener noreferrer"><strong>Experience Meek Live Today.</strong></a>
               </p>
-              <p>
-                His operational acumen was further honed at <strong>IIANA International</strong>, evaluating government tenders and coordinating multi-site logistics to achieve 100% on-time delivery. At <strong>Qualifie</strong>, Anik built a B2B partnership network from scratch, onboarding 33 organizations and driving 350+ applications via a content strategy that vastly outperformed sector averages.
-              </p>
+            </div>
+          </section>
+
+          {/* SECTION 3: Dual Feature Article (Agent & Bishod) */}
+          <section className="editorial-section dual-feature">
+            <h2 className="section-title">THE DIGITAL ENGINEERING SHOWCASE</h2>
+            <div className="newspaper-divider"></div>
+            
+            <div className="feature-split">
+              <div className="feature-column">
+                <h3 className="feature-headline">AUTOMATING THE FUTURE: AI LEAD GEN AGENT</h3>
+                <a href="https://github.com/hasanmahbuub-netizen/Agent" target="_blank" rel="noopener noreferrer">
+                  <img src="/ai_agent.png" alt="AI Lead Generation Agent" className="feature-img" />
+                </a>
+                <p>
+                  An autonomous artificial intelligence agent designed to fully automate and optimize the grueling process of lead generation. Built with modern AI workflows, this agent acts as an untiring digital employee, finding, verifying, and delivering high-quality prospects.
+                </p>
+              </div>
               
-              <figure style={{ marginTop: '2rem', marginBottom: '1rem', borderTop: '1px solid var(--border-ink)', paddingTop: '1rem' }}>
-                <h3 className="tertiary-headline">ENTREPRENEURIAL VENTURES</h3>
-                <p>Under <strong>Independent Consumer Ventures</strong>, Anik founded <em>Memoir Apparels</em>, a D2C brand managing the full supply chain. He also launched <em>IIANA Lifestyle</em>, achieving 100% sell-through within two months, and conducted deep feasibility studies for <em>Maverick & Co.</em> skincare.</p>
-              </figure>
-              
-              <h3 className="tertiary-headline" style={{marginTop: '1.5rem'}}>THE CLASSIFIEDS: SKILLS & TECH</h3>
+              <div className="feature-column">
+                <h3 className="feature-headline">FINANCIAL CLARITY: THE BISHOD INITIATIVE</h3>
+                <a href="https://bishod.lovable.app" target="_blank" rel="noopener noreferrer">
+                  <img src="/bishod.png" alt="Bishod App" className="feature-img" />
+                </a>
+                <p>
+                  A powerful financial aggregator answering the crucial question: "Which bank actually gives you the best deal?" Bishod cuts through the marketing noise of modern banking, delivering raw, comparative data to empower consumer financial decisions.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* SECTION 4: Classifieds & Kumoo Store */}
+          <section className="editorial-section bottom-showcase">
+            <div className="classifieds-wrapper">
+              <h3 className="section-title" style={{fontSize: '1.8rem'}}>THE CLASSIFIEDS: SKILLS & ARSENAL</h3>
               <div className="classifieds-grid">
                 <div className="classified-box">
                   <div className="classified-title">Commercial</div>
@@ -118,63 +174,21 @@ function App() {
                   Ready to bring proven commercial instincts to a team that moves fast.
                 </div>
               </div>
-
             </div>
-          </article>
 
-          <aside className="sidebar">
-            
-            <section className="profile-section">
-              <img src="/author_portrait.jpeg" alt="Portrait of Mahbub Hasan Anik" className="profile-img halftone-img" />
-              <div className="profile-name">Mahbub Hasan Anik</div>
-              <div className="profile-title">Editor-in-Chief & Lead Engineer</div>
-            </section>
-
-            <section className="secondary-story">
-              <h3 className="secondary-headline">DIGITAL VENTURES</h3>
-              <div className="newspaper-divider" style={{height: '2px', margin: '0.5rem 0'}}></div>
-              <p>
-                Beyond traditional marketing, Anik engineers digital solutions. His recent web properties demonstrate a synthesis of code and consumer need:
-              </p>
-
+            <div className="kumoo-wrapper">
+              <h3 className="section-title" style={{fontSize: '1.8rem'}}>FEATURED PRODUCT</h3>
               <div className="venture-box">
-                <a href="https://github.com/hasanmahbuub-netizen/Agent" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
-                  <img src="/ai_agent.png" alt="AI Lead Generation Agent" className="venture-img halftone-img" />
-                  <h4 style={{ fontFamily: 'var(--font-headline)', fontSize: '1.2rem', marginBottom: '0.2rem' }}>AI LEAD GEN AGENT</h4>
-                  <p style={{ fontSize: '0.9rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>github.com/hasanmahbuub-netizen/Agent</p>
-                  <p style={{ fontSize: '0.9rem' }}>An autonomous artificial intelligence agent designed to automate and optimize the lead generation process.</p>
+                <a href="https://kumooshop.vercel.app" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
+                  <img src="/kumoo.png" alt="Kumoo Shop" className="venture-img" />
+                  <h4 style={{ fontFamily: 'var(--font-headline)', fontSize: '1.2rem', marginBottom: '0.2rem' }}>KUMOO SHOP</h4>
+                  <p style={{ fontSize: '0.9rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>kumooshop.vercel.app</p>
+                  <p style={{ fontSize: '0.9rem' }}>An e-commerce storefront for artisan crochet plushies with integrated chat support.</p>
                 </a>
               </div>
-              
-              <div className="venture-box">
-                <img src="/bishod.png" alt="Bishod App" className="venture-img halftone-img" />
-                <h4 style={{ fontFamily: 'var(--font-headline)', fontSize: '1.2rem', marginBottom: '0.2rem' }}>BISHOD</h4>
-                <p style={{ fontSize: '0.9rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>bishod.lovable.app</p>
-                <p style={{ fontSize: '0.9rem' }}>A financial aggregator answering the crucial question: "Which bank actually gives you the best deal?"</p>
-              </div>
+            </div>
+          </section>
 
-              <div className="venture-box">
-                <img src="/meek.png" alt="Meek App" className="venture-img halftone-img" />
-                <h4 style={{ fontFamily: 'var(--font-headline)', fontSize: '1.2rem', marginBottom: '0.2rem' }}>MEEK</h4>
-                <p style={{ fontSize: '0.9rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>joinmeek.vercel.app</p>
-                <p style={{ fontSize: '0.9rem' }}>An interactive spiritual application challenging users: "Can you say it perfectly?"</p>
-              </div>
-
-              <div className="venture-box">
-                <img src="/kumoo.png" alt="Kumoo Shop" className="venture-img halftone-img" />
-                <h4 style={{ fontFamily: 'var(--font-headline)', fontSize: '1.2rem', marginBottom: '0.2rem' }}>KUMOO</h4>
-                <p style={{ fontSize: '0.9rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>kumooshop.vercel.app</p>
-                <p style={{ fontSize: '0.9rem' }}>An e-commerce storefront for artisan crochet plushies with integrated chat support.</p>
-              </div>
-            </section>
-
-            <section className="ad-box">
-              <div className="ad-title">CONTACT</div>
-              <p><strong>Phone:</strong> +8801846799863</p>
-              <p><strong>Email:</strong> mahbub.anik02@gmail.com</p>
-              <p><em>Available for high-impact roles.</em></p>
-            </section>
-          </aside>
         </main>
 
         <footer className="newspaper-footer">

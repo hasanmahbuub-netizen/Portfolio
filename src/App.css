@@ -102,33 +102,36 @@
   padding-top: 0.5rem;
 }
 
-/* Front Page Layout */
-.front-page {
-  display: grid;
-  grid-template-columns: 2.5fr 1fr;
-  gap: var(--col-gap);
+/* --- EDITORIAL LAYOUT (The New Structure) --- */
+
+.editorial-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Large gap between major sections */
+}
+
+.editorial-section {
   border-bottom: var(--rule-thick) solid var(--border-ink);
   padding-bottom: 2rem;
 }
 
-@media (max-width: 900px) {
-  .front-page {
-    grid-template-columns: 1fr;
-  }
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
 }
 
-.lead-story {
-  padding-right: var(--col-gap);
-  border-right: 2px solid var(--border-ink);
+/* Section 1: Lead Story */
+.lead-story-section {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--col-gap);
 }
 
-@media (max-width: 900px) {
-  .lead-story {
-    padding-right: 0;
-    border-right: none;
-    border-bottom: 2px solid var(--border-ink);
-    padding-bottom: 1.5rem;
-  }
+.lead-story-sidebar {
+  border-left: 2px solid var(--border-ink);
+  padding-left: var(--col-gap);
 }
 
 .lead-headline {
@@ -149,24 +152,18 @@
   display: inline-block;
 }
 
-/* Secondary Stories & Sidebar */
-.secondary-story {
-  margin-bottom: 2rem;
+.pull-quote {
+  font-size: 1.8rem;
+  font-style: italic;
+  text-align: center;
+  margin: 2.5rem 0;
+  padding: 1.5rem 2rem;
+  border-top: 2px solid var(--border-ink);
+  border-bottom: 2px solid var(--border-ink);
+  font-family: 'Playfair Display', serif;
+  line-height: 1.3;
 }
 
-.secondary-headline {
-  font-size: 2.2rem;
-  letter-spacing: -0.5px;
-}
-
-.tertiary-headline {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border-ink);
-  padding-bottom: 0.2rem;
-}
-
-/* Profile Section */
 .profile-section {
   border: 2px solid var(--border-ink);
   padding: 1rem;
@@ -196,12 +193,116 @@
   color: var(--accent-ink);
 }
 
-/* Classifieds Section */
+/* Section 2: Centerfold Banner (Meek) */
+.centerfold-banner {
+  background-color: var(--border-ink);
+  color: var(--bg-newsprint);
+  padding: 3rem 2rem;
+  margin: 0 -2rem; /* Pull out of padding */
+  text-align: center;
+  border-top: var(--rule-thick) solid var(--text-ink);
+  border-bottom: var(--rule-thick) solid var(--text-ink);
+}
+
+.microfilm-mode .centerfold-banner {
+  background-color: #2a2a2a;
+}
+
+.centerfold-headline {
+  font-size: 3.5rem;
+  color: var(--bg-newsprint);
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+
+.centerfold-subhead {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #d0cabc;
+}
+
+.microfilm-mode .centerfold-subhead {
+  color: #a0a0a0;
+}
+
+.centerfold-image-container {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  border: 4px solid var(--bg-newsprint);
+  padding: 0.5rem;
+  background: var(--text-ink);
+}
+
+.centerfold-img {
+  width: 100%;
+  display: block;
+}
+
+.centerfold-text {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.centerfold-text a {
+  color: var(--bg-newsprint);
+  text-decoration: underline;
+}
+
+/* Section 3: Dual Feature (Agent & Bishod) */
+.feature-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--col-gap);
+  margin-top: 2rem;
+}
+
+.feature-column {
+  border: 1px solid var(--border-ink);
+  padding: 1.5rem;
+  background: rgba(0,0,0,0.02);
+}
+
+.microfilm-mode .feature-column {
+  background: rgba(255,255,255,0.05);
+}
+
+.feature-headline {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-bottom: 2px solid var(--border-ink);
+  padding-bottom: 0.5rem;
+}
+
+.feature-img {
+  width: 100%;
+  border: 1px solid var(--border-ink);
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px 0 var(--border-ink);
+  transition: transform 0.2s;
+}
+
+.feature-img:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--border-ink);
+}
+
+/* Section 4: Bottom Showcase (Classifieds + Kumoo) */
+.bottom-showcase {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--col-gap);
+  border-bottom: none; /* Last section */
+}
+
 .classifieds-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  margin-top: 1rem;
   font-size: 0.9rem;
 }
 
@@ -219,47 +320,26 @@
   padding-bottom: 0.2rem;
 }
 
-/* Venture Box */
 .venture-box {
-  border: 1px solid var(--border-ink);
-  padding: 1rem;
-  margin-bottom: 1.5rem;
+  border: 2px solid var(--border-ink);
+  padding: 1.5rem;
   background: transparent;
-  box-shadow: 2px 2px 0 var(--border-ink);
+  box-shadow: 4px 4px 0 var(--border-ink);
+  text-align: center;
 }
 
 .venture-img {
   width: 100%;
   border: 1px solid var(--border-ink);
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .ad-box {
   border: 4px double var(--border-ink);
   padding: 1.5rem;
   text-align: center;
-  margin-top: 2rem;
   font-family: var(--font-headline);
   background: transparent;
-}
-
-.ad-title {
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-  letter-spacing: 2px;
-}
-
-.pull-quote {
-  font-size: 1.8rem;
-  font-style: italic;
-  text-align: center;
-  margin: 2.5rem 0;
-  padding: 1.5rem 2rem;
-  border-top: 2px solid var(--border-ink);
-  border-bottom: 2px solid var(--border-ink);
-  font-family: 'Playfair Display', serif;
-  line-height: 1.3;
 }
 
 /* Footer */
@@ -271,12 +351,22 @@
   color: var(--accent-ink);
 }
 
-.newspaper-footer p {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
 
 /* --- Mobile Optimization --- */
+@media (max-width: 900px) {
+  .lead-story-section, .feature-split, .bottom-showcase {
+    grid-template-columns: 1fr;
+  }
+  
+  .lead-story-sidebar {
+    border-left: none;
+    padding-left: 0;
+    border-top: 4px double var(--border-ink);
+    padding-top: 2rem;
+    margin-top: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .masthead-top {
     flex-direction: column;
@@ -286,41 +376,58 @@
   }
 
   .masthead-title {
-    font-size: 3.5rem; /* Drastically scale down the huge Chomsky font */
+    font-size: 3.5rem; 
     line-height: 1;
     margin-top: 0.5rem;
   }
 
-  .masthead-subtitle {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
   .lead-headline {
-    font-size: 2.5rem; /* Scale down main article title */
+    font-size: 2.5rem; 
+  }
+  
+  .centerfold-banner {
+    padding: 2rem 1rem;
+    margin: 0 -1rem; /* Adjust for mobile root padding */
   }
 
-  .secondary-headline {
-    font-size: 1.8rem;
+  .centerfold-headline {
+    font-size: 2.2rem;
   }
 
-  .pull-quote {
-    font-size: 1.3rem;
-    padding: 1rem;
-    margin: 1.5rem 0;
+  .section-title {
+    font-size: 2rem;
   }
 
   .classifieds-grid {
-    grid-template-columns: 1fr; /* Single column classifieds on phone */
+    grid-template-columns: 1fr; 
   }
 
   .ticker__item {
     padding: 0 1rem;
     font-size: 0.75rem;
   }
-
-  .ad-title {
-    font-size: 2rem;
+  
+  /* Mobile: Alternating Backgrounds to prevent dullness */
+  .editorial-section {
+    padding: 2rem 1rem;
+    margin: 0 -1rem;
+    border-bottom: 4px double var(--border-ink);
+  }
+  
+  .lead-story-section {
+    background-color: transparent;
+  }
+  
+  .dual-feature {
+    background-color: rgba(0,0,0,0.03);
+  }
+  
+  .microfilm-mode .dual-feature {
+    background-color: rgba(255,255,255,0.02);
+  }
+  
+  .bottom-showcase {
+    background-color: transparent;
   }
 }
 
