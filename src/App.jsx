@@ -136,6 +136,15 @@ function App() {
               <p>
                 Beyond traditional marketing, Anik engineers digital solutions. His recent web properties demonstrate a synthesis of code and consumer need:
               </p>
+
+              <div className="venture-box">
+                <a href="https://github.com/hasanmahbuub-netizen/Agent" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
+                  <img src="/ai_agent.png" alt="AI Lead Generation Agent" className="venture-img halftone-img" />
+                  <h4 style={{ fontFamily: 'var(--font-headline)', fontSize: '1.2rem', marginBottom: '0.2rem' }}>AI LEAD GEN AGENT</h4>
+                  <p style={{ fontSize: '0.9rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>github.com/hasanmahbuub-netizen/Agent</p>
+                  <p style={{ fontSize: '0.9rem' }}>An autonomous artificial intelligence agent designed to automate and optimize the lead generation process.</p>
+                </a>
+              </div>
               
               <div className="venture-box">
                 <img src="/bishod.png" alt="Bishod App" className="venture-img halftone-img" />
